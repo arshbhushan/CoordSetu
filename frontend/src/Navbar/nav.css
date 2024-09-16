@@ -1,0 +1,133 @@
+
+.header{
+    position:fixed;
+    top: 5px;
+     left:8px;
+    right:40px;
+    width:100%;
+   justify-content: space-between;
+    align-items: center;
+    display:inline-flex;
+    z-index: index 100;
+    font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  
+
+}
+.navbar a{
+    position:relative;
+    font-size:18px;
+    color: black;
+    font-weight: 500;
+    margin-left: 40px;
+    margin-top:20px;
+    text-decoration: none;
+    flex:2 2 30px;
+    
+}
+.btn{
+    height:50px;
+   
+    color:aliceblue;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-right:2px;
+    border-radius: 9px 9px 9px 9px;
+    background-color: rgb(21, 170, 239);
+    border:rgb(21, 170, 239);
+}
+.mobile-navbar-btn{
+display: none;
+background:transparent;
+cursor:pointer;
+}
+.mobile-navbar-icon{
+    
+width:1.5em;
+height:1.5em;
+}
+
+
+.mobile-navbar-icon2{
+    display: none;
+}
+
+@media(max-width:62em) {
+   .mobile-navbar-btn{
+    display: block;
+    z-index: 999;
+    border:3px solid black;
+    color:black;
+    }
+    .mobile-navbar-icon{
+        display: flex;
+    }
+    .header{
+        position: relative;
+    }
+    .logo{
+        width: 40%;
+        height:20%;
+    }
+    .navbar {
+     width: 100%;
+     height:100vh;
+
+     background-color: rgb(118, 183, 247);
+     position: absolute;
+     top:0;
+     left:0;
+     justify-content: center;
+     display: flex;
+     align-items: center;
+    
+    transform: translateX(100%);
+    transition: all 5s linear;
+   
+    }
+    .navbar{
+       
+        flex-direction: column;
+       
+        align-items: center;
+    }
+    .active.navbar{
+            transform:translateX(0);
+            pointer-events: auto;
+            opacity: 1;
+            visibility: visible;
+        }
+      .active.mobile-navbar-icon{
+           display:none;
+        }
+       .active.mobile-navbar-icon2{
+            display:block;
+        }
+}
+        @media(max-width:320px){
+            .navbar{
+                font-weight: 2;
+            }
+            .logo{
+                width:60%;
+            }
+            .header{
+                padding:0 2.4em;
+            }
+        }
+    
+
+    
+  
+
+    
+    
+
+
+  
+
+  
+    
+  
+   
